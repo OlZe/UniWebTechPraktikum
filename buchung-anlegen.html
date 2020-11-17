@@ -21,40 +21,41 @@
 
     <main title="Seminar anlegen">
         <h2>Seminar anlegen</h2>
-        <form>
+        <form method="POST">
             <fieldset>
                 <legend>Seminar</legend>
                 <label>Raumnummer
-                    <input name="raum" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E,1-3]\.\d\d" required autofocus>
+                    <input name="roomno" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E,1-3]\.\d\d" required autofocus>
                 </label><br>
                 <label>Bezeichnung
-                    <input name="bezeichnung" required placeholder="z.B. Kolloquium">
+                    <input name="restitle" required placeholder="z.B. Kolloquium" maxlength="20">
                 </label><br>
                 <label>Person
-                    <select name="person">
+                    <select name="resperson">
+                        <option value="" selected>&nbsp;</option>
                         <option value="jörges">Prof. Dr. Jörges</option>
                         <option value="cleven">Prof. Dr. Cleven</option>
                         <option value="bab">Prof. Dr. Bab</option>
                     </select>
                 </label><br>
                 <label>Erwartete Anzahl Teilnehmer
-                    <input name="anzahlTeilnehmer" type="number" required>
+                    <input name="resparticipants" type="number">
                 </label><br>
                 <label>Beschreibung
-                    <textarea name="beschreibung" required></textarea>
+                    <textarea name="beschreibung" maxlength="500"></textarea>
                 </label>
             </fieldset>
 
             <fieldset>
                 <legend>Zeit</legend>
                 <label>Datum
-                    <input name="datum" type="date" required>
+                    <input name="resdate" type="date" required>
                 </label><br>
                 <label>Startzeit
-                    <input name="startzeit" type="time" required>
+                    <input name="resstart" type="time" min="08:00" max="21:00" required>
                 </label><br>
                 <label>Endzeit
-                    <input name="endzeit" type="time" required>
+                    <input name="resend" type="time" required max="22:00">
                 </label>
             </fieldset>
 
