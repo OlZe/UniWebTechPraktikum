@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Buchung: Kolloquium</title>
+    <title>Liste verfügbarer Räume</title>
 </head>
 
 <body>
-
     <header title="Raumbuchungs-Organitron 7000">
         <img src="/logo.png" height="75" alt="heftiges logo" />
         <h1>Raumbuchungs-Organitron 7000</h1>
@@ -20,27 +19,59 @@
         <a href="/buchung-anlegen.html">Buchung anlegen</a>
     </nav>
 
-    <main title="Buchung: Kolloquium">
-        <h2>Buchung: Kolloquium</h2>
-        <section title="Information">
-            <h3>Information</h3>
-            <ul>
-                <li>Bezeichung: Kolloquium</li>
-                <li>Datum: 10.11.2020</li>
-                <li>Zeitraum: 10:00 bis 10:45</li>
-                <li>Gebucht von: <a href="mailto:sven.joerges@fh-dortmund.de">Jörges</a></li>
-                <li>Anzahl Teilnehmer: 2</li>
-            </ul>
-        </section>
+    <main title="Seminar anlegen">
+        <h2>Seminar anlegen</h2>
+        <form>
+            <fieldset>
+                <legend>Seminar</legend>
+                <label>Raumnummer
+                    <input name="raum" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E,1-3]\.\d\d" required autofocus>
+                </label><br>
+                <label>Bezeichnung
+                    <input name="bezeichnung" required placeholder="z.B. Kolloquium">
+                </label><br>
+                <label>Person
+                    <select name="person">
+                        <option value="jörges">Prof. Dr. Jörges</option>
+                        <option value="cleven">Prof. Dr. Cleven</option>
+                        <option value="bab">Prof. Dr. Bab</option>
+                    </select>
+                </label><br>
+                <label>Erwartete Anzahl Teilnehmer
+                    <input name="anzahlTeilnehmer" type="number" required>
+                </label><br>
+                <label>Beschreibung
+                    <textarea name="beschreibung" required></textarea>
+                </label>
+            </fieldset>
 
-        <section title="Beschreibung">
-            <h3>Beschreibung</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis commodi cumque et voluptatibus vel
-                excepturi delectus, officiis facere quam pariatur non eaque. Quis sit quo eaque numquam inventore
-                consequatur praesentium!</p>
-        </section>
+            <fieldset>
+                <legend>Zeit</legend>
+                <label>Datum
+                    <input name="datum" type="date" required>
+                </label><br>
+                <label>Startzeit
+                    <input name="startzeit" type="time" required>
+                </label><br>
+                <label>Endzeit
+                    <input name="endzeit" type="time" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Buchen</legend>
+                <input type="submit" value="Seminar buchen">
+            </fieldset>
+        </form>
+
+
+
+
+
+
+
+
     </main>
-
 
     <footer>
         <section title="Aktuelle Meldungen">
