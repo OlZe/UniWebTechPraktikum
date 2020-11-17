@@ -21,7 +21,7 @@
 
     <main title="Seminar anlegen">
         <h2>Seminar anlegen</h2>
-        <form method="POST">
+        <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php" method="POST">
             <fieldset>
                 <legend>Seminar</legend>
                 <label>Raumnummer
@@ -42,7 +42,7 @@
                     <input name="resparticipants" type="number">
                 </label><br>
                 <label>Beschreibung
-                    <textarea name="beschreibung" maxlength="500"></textarea>
+                    <textarea name="resdescription" maxlength="500"></textarea>
                 </label>
             </fieldset>
 
