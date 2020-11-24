@@ -16,7 +16,10 @@ nav a:hover {
 .buchungen-tabelle thead {
     background-color: #999999;
 }
-
 .buchungen-tabelle tbody tr:nth-child(even) {
     background-color: #ffbf6b;
+}
+
+a[href^="mailto:"]::before {
+    content: '✉'
 }
