@@ -8,3 +8,11 @@
 nav a:hover {
     background: linear-gradient(to right, rgb(69, 112, 255), rgb(255, 105, 105));
 }
+
+.buchungen-tabelle thead {
+    background-color: #999999;
+}
+
+.buchungen-tabelle tbody tr:nth-child(even) {
+    background-color: #ffbf6b;
+}
