@@ -23,3 +23,8 @@ nav a:hover {
 a[href^="mailto:"]::before {
     content: '✉'
 }
+
+header h1 {
+    text-shadow: 2px 2px 2px #ff0000;
+    letter-spacing: 0.2em;
+}
