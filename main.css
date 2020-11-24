@@ -1,3 +1,6 @@
-h2 {
-    /* color: firebrick; for test only */
+.aktuelle-meldungen {
+    background-color: rgb(166, 240, 240);
+    padding: 3px;
+    margin: 3px;
+    border: dashed 2px;
 }
