@@ -1,0 +1,49 @@
+h2 
+{
+    color: firebrick;
+}
+
+input:optional 
+{
+    border-color: gray;
+}
+
+input:required:valid 
+{
+    border-color: green;
+}
+
+input:invalid 
+{
+    border-color: red;
+}
+
+input:required
+{
+    background-color: peachpuff;
+}
+
+label.isRequired::after 
+{
+    content: "*";
+    color: red;
+}
+
+fieldset>legend
+{
+    padding: 5px;
+    font-style: italic;
+    font-size: smaller;
+    color: white;
+    background-color: blue;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+fieldset
+{
+    border-style: groove;
+    border-radius: 5px;
+}
