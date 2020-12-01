@@ -92,3 +92,14 @@ nav ul li {
     display: inline-block;
     margin-right: 10px;
 }
+
+footer {
+    background-color: white;
+    position: sticky;
+    bottom: 10px;
+}
+
+footer * {
+    display: inline;
+    margin-right: 10px;
+}
