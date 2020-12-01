@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Buchung: Kolloquium</title>
     <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/flexbox.css">
 </head>
 
 <body>
@@ -23,51 +24,54 @@
         </ul>
     </nav>
 
-    <main title="Buchung: Kolloquium">
-        <h2>Buchung: Kolloquium</h2>
-        <section title="Information">
-            <h3>Information</h3>
+
+    <div id="mainContainer">
+        <main title="Buchung: Kolloquium">
+            <h2>Buchung: Kolloquium</h2>
+            <section title="Information">
+                <h3>Information</h3>
+                <ul>
+                    <li>Bezeichung: Kolloquium</li>
+                    <li>Datum: 10.11.2020</li>
+                    <li>Zeitraum: 10:00 bis 10:45</li>
+                    <li>Gebucht von: <a href="mailto:sven.joerges@fh-dortmund.de">Jörges</a></li>
+                    <li>Anzahl Teilnehmer: 2</li>
+                </ul>
+            </section>
+
+            <section title="Beschreibung">
+                <h3>Beschreibung</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis commodi cumque et voluptatibus vel
+                    excepturi delectus, officiis facere quam pariatur non eaque. Quis sit quo eaque numquam inventore
+                    consequatur praesentium!</p>
+            </section>
+        </main>
+
+
+        <aside title="Aktuelle Meldungen" class="aktuelle-meldungen">
+            <h2>Aktuelle Meldungen</h2>
             <ul>
-                <li>Bezeichung: Kolloquium</li>
-                <li>Datum: 10.11.2020</li>
-                <li>Zeitraum: 10:00 bis 10:45</li>
-                <li>Gebucht von: <a href="mailto:sven.joerges@fh-dortmund.de">Jörges</a></li>
-                <li>Anzahl Teilnehmer: 2</li>
+                <li>
+                    <article title="Lorem1">
+                        <h3>Lorem1</h3>
+                        10.11.2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam cum totam
+                        facere. Voluptatem facere voluptatum laudantium unde, aperiam non, accusantium magnam blanditiis
+                        repellendus, animi sequi consequatur. Delectus, inventore voluptate.
+                    </article>
+                </li>
+                <li>
+                    <article title="Lorem2">
+                        <h3>Lorem2</h3>
+                        07.11.2020: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, veniam libero?
+                        Cum,
+                        quae hic eos debitis commodi dolorem maiores libero consequuntur in voluptas culpa nulla
+                        dignissimos
+                        natus eligendi expedita recusandae.
+                    </article>
+                </li>
             </ul>
-        </section>
-
-        <section title="Beschreibung">
-            <h3>Beschreibung</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis commodi cumque et voluptatibus vel
-                excepturi delectus, officiis facere quam pariatur non eaque. Quis sit quo eaque numquam inventore
-                consequatur praesentium!</p>
-        </section>
-    </main>
-
-
-    <aside title="Aktuelle Meldungen"  class="aktuelle-meldungen">
-        <h2>Aktuelle Meldungen</h2>
-        <ul>
-            <li>
-                <article title="Lorem1">
-                    <h3>Lorem1</h3>
-                    10.11.2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam cum totam
-                    facere. Voluptatem facere voluptatum laudantium unde, aperiam non, accusantium magnam blanditiis
-                    repellendus, animi sequi consequatur. Delectus, inventore voluptate.
-                </article>
-            </li>
-            <li>
-                <article title="Lorem2">
-                    <h3>Lorem2</h3>
-                    07.11.2020: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, veniam libero?
-                    Cum,
-                    quae hic eos debitis commodi dolorem maiores libero consequuntur in voluptas culpa nulla
-                    dignissimos
-                    natus eligendi expedita recusandae.
-                </article>
-            </li>
-        </ul>
-    </aside>
+        </aside>
+    </div>
 
     <footer title="legal">
         <h3>Legal stuff</h3>

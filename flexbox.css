@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#mainContainer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#mainContainer *:first-child {
+    flex-basis: 50%
+}
+
+#mainContainer *:last-child {
+    flex-basis: 50%
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+}
