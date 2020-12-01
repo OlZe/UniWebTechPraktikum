@@ -80,3 +80,8 @@ fieldset
     border-style: groove;
     border-radius: 5px;
 }
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
