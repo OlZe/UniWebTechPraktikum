@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+}
+
+nav > div {
+    /* Form */
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
+
+    /* Linktext zentrieren */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
