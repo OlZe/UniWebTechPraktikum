@@ -24,18 +24,6 @@ a[href^="mailto:"]::before {
     content: '✉'
 }
 
-header h1 {
-    text-shadow: 2px 2px 2px #ff0000;
-    letter-spacing: 0.2em;
-}
-
-header a {
-    float: left;
-}
-header + * {
-    clear: left;
-}
-
 section {
     border-bottom: 1px solid;
     border-left: 1px solid;

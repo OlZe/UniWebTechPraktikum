@@ -3,11 +3,6 @@ body {
     flex-flow: column nowrap;
 }
 
-header {
-    display: flex;
-    flex-flow: row wrap;
-}
-
 nav {
     display: flex;
     flex-flow: row wrap;
@@ -27,4 +22,31 @@ nav > div {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+}
+
+nav > div > a {
+    font-size: x-large;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    nav > div {
+        width: 166px;
+        height: 166px;
+    }
+
+    nav > div > a {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav > div {
+        width: 133px;
+        height: 133px;
+    }
+
+    nav > div > {
+        font-size: medium;
+    }
 }
