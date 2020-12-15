@@ -8,8 +8,42 @@
     <link rel="stylesheet" href="/grid.css">
 
     <style>
-        #roomPic {
-            float: right
+        main {
+            display: grid;
+            grid-template-areas: "main-header main-header"
+                "main-info main-picture"
+                "main-buchungen main-picture";
+            grid-template-columns: auto auto;
+        }
+
+        @media screen and (max-width:480px) {
+            main {
+                grid-template-areas: "main-header"
+                    "main-info"
+                    "main-buchungen"
+                    "main-picture";
+                    grid-template-columns: 100%
+            }
+        }
+
+        main h2 {
+            grid-area: main-header;
+        }
+
+        main figure {
+            grid-area: main-picture;
+        }
+
+        main figure img {
+            width: 100%;
+        }
+
+        main section[title="Informationen"] {
+            grid-area: main-info;
+        }
+
+        main section[title="Buchungen"] {
+            grid-area: main-buchungen;
         }
     </style>
 </head>
@@ -32,7 +66,7 @@
     <main title="Raum: A.E.01">
         <h2>Raum: A.E.01</h2>
 
-        <figure id="roomPic">
+        <figure>
             <img src="ae01.jpg" alt="Raum: A.E.01" width="400" />
             <figcaption>
                 Abbildung: Raum A.E.01
@@ -106,7 +140,7 @@
     </main>
 
 
-    <aside title="Aktuelle Meldungen"  class="aktuelle-meldungen">
+    <aside title="Aktuelle Meldungen" class="aktuelle-meldungen">
         <h2>Aktuelle Meldungen</h2>
         <ul>
             <li>

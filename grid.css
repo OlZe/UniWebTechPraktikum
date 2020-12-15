@@ -7,6 +7,17 @@ body {
     grid-template-columns: 70% 30%;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas:"header"
+                            "nav"
+                            "main"
+                            "aside"
+                            "footer";
+        grid-template-columns: 100%;
+    }
+}
+
 header {
     grid-area: header;
 }
