@@ -8,15 +8,26 @@ body {
     flex-flow: row nowrap;
 }
 
-#mainContainer *:first-child {
-    flex-basis: 50%
-}
-
-#mainContainer *:last-child {
-    flex-basis: 50%
+aside {
+    flex: 1 1 30%;
 }
 
 main {
+    flex: 1 1 65%;
+
     display: flex;
     flex-flow: column nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    #mainContainer {
+        flex-flow: row wrap;
+    }
+    aside {
+        flex: 1 1 auto;
+    }
+    
+    main {
+        flex: 1 1 auto;
+    }
 }
