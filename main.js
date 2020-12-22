@@ -20,6 +20,10 @@ function Raum(nr, bez, gebäude, kapazität, austattung) {
 }
 
 
+let myRoom = new Raum(69, 'Ein Raum', 'Ein Gebäude', 30, ['1 Beamer', '2 Tafeln']);
+let myRoom2 = new Raum(420, 'Ein Raum', 'Ein Gebäude', 30, ['1 Beamer', '2 Tafeln']);
+console.log(myRoom, myRoom2);
+
 
 let buchung = {
     bezeichnung: 'Blinken',
@@ -46,7 +50,10 @@ let buchung3 = {
     beschreibung: 'Augen anfeuchten'
 };
 
-let myRoom = new Raum(69, 'Ein Raum', 'Ein Gebäude', 30, ['1 Beamer', '2 Tafeln']);
+
 myRoom.addBuchung(buchung);
 myRoom.addBuchung(buchung2);
 myRoom.addBuchung(buchung3);
+for(let buchung of myRoom.buchungen) {
+    console.log(buchung);
+}
