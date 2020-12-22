@@ -15,3 +15,12 @@ function Raum(nr, bez, gebäude, kapazität, austattung) {
 }
 
 let myRoom = new Raum(69, 'Ein Raum', 'Ein Gebäude', 30, ['1 Beamer', '2 Tafeln']);
+
+let buchung = {
+    bezeichnung: 'Blinken',
+    startZeit: new Date(2020, 11, 22, 11, 03, 34, 579),
+    endZeit: new Date(2020, 11, 22, 11, 03, 34, 979),
+    gebuchtVon: 'ich',
+    anzahlTeilnehmer: 1,
+    beschreibung: 'Augen anfeuchten'
+};
