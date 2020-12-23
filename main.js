@@ -27,24 +27,24 @@ console.log(myRoom, myRoom2);
 
 let buchung = {
     bezeichnung: 'Blinken',
-    startZeit: new Date(2020, 11, 22, 11, 03, 34, 579),
-    endZeit: new Date(2020, 11, 22, 11, 03, 34, 979),
+    startZeit: new Date(2020, 11, 22, 11, 3, 34, 579),
+    endZeit: new Date(2020, 11, 22, 11, 3, 34, 979),
     gebuchtVon: 'ich',
     anzahlTeilnehmer: 1,
     beschreibung: 'Augen anfeuchten'
 };
 let buchung2 = {
     bezeichnung: 'Blinken',
-    startZeit: new Date(2020, 11, 23, 11, 03, 34, 579),
-    endZeit: new Date(2020, 11, 23, 11, 03, 34, 979),
+    startZeit: new Date(2020, 11, 23, 11, 3, 34, 579),
+    endZeit: new Date(2020, 11, 23, 11, 3, 34, 979),
     gebuchtVon: 'ich',
     anzahlTeilnehmer: 1,
     beschreibung: 'Augen anfeuchten'
 };
 let buchung3 = {
     bezeichnung: 'Blinken',
-    startZeit: new Date(2021, 11, 22, 11, 03, 34, 579),
-    endZeit: new Date(2021, 11, 22, 11, 03, 34, 979),
+    startZeit: new Date(2021, 11, 22, 11, 3, 34, 579),
+    endZeit: new Date(2021, 11, 22, 11, 3, 34, 979),
     gebuchtVon: 'ich',
     anzahlTeilnehmer: 1,
     beschreibung: 'Augen anfeuchten'
