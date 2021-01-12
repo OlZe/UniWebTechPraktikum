@@ -19,41 +19,51 @@ function Raum(nr, bez, gebäude, kapazität, austattung) {
     };
 }
 
-
-let myRoom = new Raum(69, 'Ein Raum', 'Ein Gebäude', 30, ['1 Beamer', '2 Tafeln']);
-let myRoom2 = new Raum(420, 'Ein Raum', 'Ein Gebäude', 30, ['1 Beamer', '2 Tafeln']);
-console.log(myRoom, myRoom2);
-
-
-let buchung = {
-    bezeichnung: 'Blinken',
-    startZeit: new Date(2020, 11, 22, 11, 3, 34, 579),
-    endZeit: new Date(2020, 11, 22, 11, 3, 34, 979),
-    gebuchtVon: 'ich',
-    anzahlTeilnehmer: 1,
-    beschreibung: 'Augen anfeuchten'
-};
-let buchung2 = {
-    bezeichnung: 'Blinken',
-    startZeit: new Date(2020, 11, 23, 11, 3, 34, 579),
-    endZeit: new Date(2020, 11, 23, 11, 3, 34, 979),
-    gebuchtVon: 'ich',
-    anzahlTeilnehmer: 1,
-    beschreibung: 'Augen anfeuchten'
-};
-let buchung3 = {
-    bezeichnung: 'Blinken',
-    startZeit: new Date(2021, 11, 22, 11, 3, 34, 579),
-    endZeit: new Date(2021, 11, 22, 11, 3, 34, 979),
-    gebuchtVon: 'ich',
-    anzahlTeilnehmer: 1,
-    beschreibung: 'Augen anfeuchten'
-};
+function Buchung(bez, start, ende, gebuchtVon, anzahlTeilnehmer, beschreibung) {
+    this.bezeichnung = bez;
+    this.startZeit = start;
+    this.endZeit = ende;
+    this.gebuchtVon = gebuchtVon;
+    this.anzahlTeilnehmer = anzahlTeilnehmer;
+    this.beschreibung = beschreibung;
+}
 
 
-myRoom.addBuchung(buchung);
-myRoom.addBuchung(buchung2);
-myRoom.addBuchung(buchung3);
-for(let buchung of myRoom.buchungen) {
-    console.log(buchung);
+let ae01 = new Raum('A.E.01', 'Hörsaal', 'EF42', 250, ['Drei Beamer', 'Zwei Whiteboards', 'Eine Tafel', 'Mikrofonanlage']);
+ae01.addBuchung(new Buchung('Kolloquium', new Date(2020, 10, 10, 10, 0), new Date(2020, 10, 10, 10, 45), 'ich', 5, 'kreative beschreibung'));
+ae01.addBuchung(new Buchung('Übung', new Date(2020, 10, 10, 11, 0), new Date(2020, 10, 10, 12, 30), 'du', 20, 'kreative beschreibung'));
+
+let roomInfoList = document.getElementById("room-info-list");
+if (roomInfoList) {
+    roomInfoList.append(createElementWithText('li', `Nummer: ${ae01.nummer}`));
+    roomInfoList.append(createElementWithText('li', `Bezeichnung: ${ae01.bezeichnung}`));
+    roomInfoList.append(createElementWithText('li', `Gebäude: ${ae01.gebäude}`));
+    roomInfoList.append(createElementWithText('li', `Kapazität: ${ae01.kapazität} Sitzplätze`));
+    let austattungList = document.createElement("ul");
+    for (let austattung of ae01.austattung) {
+        austattungList.append(createElementWithText('li', austattung));
+    }
+    roomInfoList.append(austattungList);
+}
+
+let buchungsTabelle = document.querySelector("#buchungen-tabelle tbody");
+if (buchungsTabelle) {
+    for(let buchung of ae01.buchungen) {
+        buchungsTabelle.append(makeTr(buchung));
+    }
+}
+
+function makeTr(buchung) {
+    let tr = document.createElement("tr");
+    tr.append(createElementWithText('td', buchung.bezeichnung));
+    tr.append(createElementWithText('td', buchung.startZeit.toLocaleDateString()));
+    tr.append(createElementWithText('td', buchung.startZeit.toLocaleTimeString()));
+    tr.append(createElementWithText('td', buchung.endZeit.toLocaleTimeString()));
+    return tr;
+}
+
+function createElementWithText(element, textContent) {
+    let li = document.createElement(element);
+    li.textContent = textContent;
+    return li;
 }
