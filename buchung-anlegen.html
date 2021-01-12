@@ -29,39 +29,46 @@
         <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php" method="POST">
             <fieldset>
                 <legend>Seminar</legend>
-                <label class="isRequired">Raumnummer
-                    <input name="roomno" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E1-3]\.\d\d" required autofocus>
-                </label><br>
-                <label class="isRequired">Bezeichnung
-                    <input name="restitle" required placeholder="z.B. Kolloquium" maxlength="20">
-                </label><br>
-                <label>Person
-                    <select name="resperson">
-                        <option value="" selected>&nbsp;</option>
-                        <option value="jörges">Prof. Dr. Jörges</option>
-                        <option value="cleven">Prof. Dr. Cleven</option>
-                        <option value="bab">Prof. Dr. Bab</option>
-                    </select>
-                </label><br>
-                <label>Erwartete Anzahl Teilnehmer
-                    <input name="resparticipants" type="number">
-                </label><br>
-                <label>Beschreibung
-                    <textarea name="resdescription" maxlength="500"></textarea>
-                </label>
+
+                <label class="isRequired" for="roomno">Raumnummer</label>
+                <input id="roomno" name="roomno" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E1-3]\.\d\d" required
+                    autofocus>
+                <br>
+
+                <label class="isRequired" for="restitle">Bezeichnung</label>
+                <input id="restitle" name="restitle" required placeholder="z.B. Kolloquium" maxlength="20">
+                <br>
+
+                <label for="resperson">Person</label>
+                <select id="resperson" name="resperson">
+                    <option value="" selected>&nbsp;</option>
+                    <option value="jörges">Prof. Dr. Jörges</option>
+                    <option value="cleven">Prof. Dr. Cleven</option>
+                    <option value="bab">Prof. Dr. Bab</option>
+                </select>
+                <br>
+
+                <label for="resparticipants">Erwartete Anzahl Teilnehmer</label>
+                <input id="resparticipants" name="resparticipants" type="number">
+                <br>
+
+                <label for="resdescription">Beschreibung</label>
+                <textarea id="resdescription" name="resdescription" maxlength="500"></textarea>
             </fieldset>
 
             <fieldset name="zeit">
                 <legend>Zeit</legend>
-                <label class="isRequired">Datum
-                    <input name="resdate" type="date" required>
-                </label><br>
-                <label class="isRequired">Startzeit
-                    <input name="resstart" type="time" min="08:00" max="21:00" required>
-                </label><br>
-                <label class="isRequired">Endzeit
-                    <input name="resend" type="time" required max="22:00">
-                </label>
+
+                <label for="resdate" class="isRequired">Datum</label>
+                <input id="resdate" name="resdate" type="date" required>
+                <br>
+
+                <label for="resstart" class="isRequired">Startzeit</label>
+                <input id="resstart" name="resstart" type="time" min="08:00" max="21:00" required>
+                <br>
+
+                <label for="resend" class="isRequired">Endzeit</label>
+                <input id="resend" name="resend" type="time" required max="22:00">
             </fieldset>
 
             <fieldset>
@@ -73,7 +80,7 @@
 
     </main>
 
-    <aside title="Aktuelle Meldungen"  class="aktuelle-meldungen">
+    <aside title="Aktuelle Meldungen" class="aktuelle-meldungen">
         <h2>Aktuelle Meldungen</h2>
         <ul>
             <li>
