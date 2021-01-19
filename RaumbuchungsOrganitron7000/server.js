@@ -58,8 +58,6 @@ function Raum(nr, bez, gebäude, kapazität, austattung) {
 
 
 function renderRoomlist(rooms) {
-    /*<li><a href="./ae01.html">A.E.01</a> Hörsaal EF42</li>
-                        <li>A.1.01 Molo-Raum EF42</li>*/
     let roomList = '';
     for (let room of rooms) {
         roomList += `<li><a href="./ae01.html">${room.nummer}</a> ${room.bezeichnung} ${room.gebäude}</li>`;
