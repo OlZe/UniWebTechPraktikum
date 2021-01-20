@@ -1,4 +1,5 @@
-function getViewportWidth() {
+function getViewportWidth() 
+{
     return window.innerWidth || document.documentElement.clientWidth;
 }
 
@@ -6,7 +7,8 @@ console.log(`Die Viewport-Breite beträgt: ${getViewportWidth()} Pixel.`);
 
 
 
-function Raum(nr, bez, gebäude, kapazität, austattung) {
+function Raum(nr, bez, gebäude, kapazität, austattung) 
+{
     this.nummer = nr;
     this.bezeichnung = bez;
     this.gebäude = gebäude;
@@ -19,7 +21,8 @@ function Raum(nr, bez, gebäude, kapazität, austattung) {
     };
 }
 
-function Buchung(bez, start, ende, gebuchtVon, anzahlTeilnehmer, beschreibung) {
+function Buchung(bez, start, ende, gebuchtVon, anzahlTeilnehmer, beschreibung) 
+{
     this.bezeichnung = bez;
     this.startZeit = start;
     this.endZeit = ende;
@@ -34,26 +37,31 @@ ae01.addBuchung(new Buchung('Kolloquium', new Date(2020, 10, 10, 10, 0), new Dat
 ae01.addBuchung(new Buchung('Übung', new Date(2020, 10, 10, 11, 0), new Date(2020, 10, 10, 12, 30), 'du', 20, 'kreative beschreibung'));
 
 let roomInfoList = document.getElementById("room-info-list");
-if (roomInfoList) {
+if (roomInfoList) 
+{
     roomInfoList.append(createElementWithText('li', `Nummer: ${ae01.nummer}`));
     roomInfoList.append(createElementWithText('li', `Bezeichnung: ${ae01.bezeichnung}`));
     roomInfoList.append(createElementWithText('li', `Gebäude: ${ae01.gebäude}`));
     roomInfoList.append(createElementWithText('li', `Kapazität: ${ae01.kapazität} Sitzplätze`));
     let austattungList = document.createElement("ul");
-    for (let austattung of ae01.austattung) {
+    for (let austattung of ae01.austattung) 
+    {
         austattungList.append(createElementWithText('li', austattung));
     }
     roomInfoList.append(austattungList);
 }
 
 let buchungsTabelle = document.querySelector("#buchungen-tabelle tbody");
-if (buchungsTabelle) {
-    for(let buchung of ae01.buchungen) {
+if (buchungsTabelle) 
+{
+    for(let buchung of ae01.buchungen) 
+    {
         buchungsTabelle.append(makeTr(buchung));
     }
 }
 
-function makeTr(buchung) {
+function makeTr(buchung) 
+{
     let tr = document.createElement("tr");
     tr.append(createElementWithText('td', buchung.bezeichnung));
     tr.append(createElementWithText('td', buchung.startZeit.toLocaleDateString()));
@@ -62,7 +70,8 @@ function makeTr(buchung) {
     return tr;
 }
 
-function createElementWithText(element, textContent) {
+function createElementWithText(element, textContent) 
+{
     let li = document.createElement(element);
     li.textContent = textContent;
     return li;
