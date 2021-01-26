@@ -1,4 +1,5 @@
 const express = require("express");
+const räume = require("../models/rooms");
 const router = express.Router();
 
 router.use(express.static("public"));
@@ -8,7 +9,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/raumliste", (req, res, next) => {
-    res.render("raumliste");
+    res.render("raumliste", { räume: räume });
 });
 
 router.get("/raumdetail", (req, res, next) => {
