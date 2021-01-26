@@ -15,43 +15,39 @@
 
     <%- include("navbar") %>
 
+      <main>
+        <section title="Raumsuche">
+          <h2>Raumsuche</h2>
+          <form method="GET" action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php">
+            <label>Raum
+              <input name="roomno" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E1-3]\.\d\d" required>
+            </label>
 
-      <div id="mainContainer">
+            <input type="submit" value="Finden">
+          </form>
+        </section>
 
-        <main>
-          <section title="Raumsuche">
-            <h2>Raumsuche</h2>
-            <form method="GET" action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php">
-              <label>Raum
-                <input name="roomno" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E1-3]\.\d\d" required>
-              </label>
+        <section title="Raumliste">
+          <h2>Raumliste</h2>
+          <ul>
+            <% for(let raum of räume) { %>
+              <li>
+                <a href="/raumdetail">
+                  <%= raum.nummer %>
+                </a>
+                <%= raum.bezeichnung %>
+                  <%= raum.gebäude %>
+              </li>
+              <% } %>
+          </ul>
+        </section>
 
-              <input type="submit" value="Finden">
-            </form>
-          </section>
+      </main>
 
-          <section title="Raumliste">
-            <h2>Raumliste</h2>
-            <ul>
-              <% for(let raum of räume) { %>
-                <li>
-                  <a href="/raumdetail">
-                    <%= raum.nummer %>
-                  </a>
-                  <%= raum.bezeichnung %>
-                    <%= raum.gebäude %>
-                </li>
-                <% } %>
-            </ul>
-          </section>
+      <%- include("aside") %>
 
-        </main>
 
-        <%- include("aside") %>
-
-      </div>
-
-      <%- include("footer") %>
+        <%- include("footer") %>
 </body>
 
 </html>
