@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liste verfügbarer Räume</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+        <%- include("header") %>
+
+    <%- include("navbar") %>
+
+
+    <div id="mainContainer">
+
+        <main>
+            <section title="Raumsuche">
+                <h2>Raumsuche</h2>
+                <form method="GET" action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php">
+                    <label>Raum
+                        <input name="roomno" placeholder="z.B. A.E.01" pattern="[A-Z]\.[E1-3]\.\d\d" required>
+                    </label>
+
+                    <input type="submit" value="Finden">
+                </form>
+            </section>
+            
+            <section title="Raumliste">
+                <h2>Raumliste</h2>
+                <ul>
+                    <li><a href="/raumdetail">A.E.01</a> Hörsaal EF42</li>
+                    <li>A.1.01 Molo-Raum EF42</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <%- include("aside") %>
+
+    </div>
+
+    <%- include("footer") %>
+</body>
+
+</html>

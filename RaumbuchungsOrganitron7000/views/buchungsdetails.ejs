@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buchung: Kolloquium</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/flexbox.css">
+</head>
+
+<body>
+
+    <%- include("header") %>
+    <%- include("navbar") %>
+
+    <div id="mainContainer">
+        <main title="Buchung: Kolloquium">
+            <h2>Buchung: Kolloquium</h2>
+            <section title="Information">
+                <h3>Information</h3>
+                <ul>
+                    <li>Bezeichung: Kolloquium</li>
+                    <li>Datum: 10.11.2020</li>
+                    <li>Zeitraum: 10:00 bis 10:45</li>
+                    <li>Gebucht von: <a href="mailto:sven.joerges@fh-dortmund.de">Jörges</a></li>
+                    <li>Anzahl Teilnehmer: 2</li>
+                </ul>
+            </section>
+
+            <section title="Beschreibung">
+                <h3>Beschreibung</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis commodi cumque et voluptatibus vel
+                    excepturi delectus, officiis facere quam pariatur non eaque. Quis sit quo eaque numquam inventore
+                    consequatur praesentium!</p>
+            </section>
+        </main>
+
+        <%- include("aside") %>
+    </div>
+
+    <%- include("footer") %>
+</body>
+
+</html>

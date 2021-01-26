@@ -10,19 +10,9 @@
 </head>
 
 <body>
-        <header title="Raumbuchungs-Organitron 7000">
-        <a href="./dashboard.html"><img src="./img/logo.png" height="75" alt="heftiges logo" /></a>
-        <h1>Raumbuchungs-Organitron 7000</h1>
-    </header>
+        <%- include("header") %>
 
-    <nav>
-        <ul>
-            <li><a href="./room-list.html">Raumliste</a></li>
-            <li><a href="./ae01.html">Raumdetails</a></li>
-            <li><a href="./ae01-20201110-1000.html">Buchungsdetails</a></li>
-            <li><a href="./buchung-anlegen.html">Buchung anlegen</a></li>
-        </ul>
-    </nav>
+    <%- include("navbar") %>
 
     <main title="Seminar anlegen">
         <h2>Seminar anlegen</h2>
@@ -80,34 +70,9 @@
 
     </main>
 
-    <aside title="Aktuelle Meldungen" class="aktuelle-meldungen">
-        <h2>Aktuelle Meldungen</h2>
-        <ul>
-            <li>
-                <article title="Lorem1">
-                    <h3>Lorem1</h3>
-                    10.11.2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam cum totam
-                    facere. Voluptatem facere voluptatum laudantium unde, aperiam non, accusantium magnam blanditiis
-                    repellendus, animi sequi consequatur. Delectus, inventore voluptate.
-                </article>
-            </li>
-            <li>
-                <article title="Lorem2">
-                    <h3>Lorem2</h3>
-                    07.11.2020: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, veniam libero?
-                    Cum,
-                    quae hic eos debitis commodi dolorem maiores libero consequuntur in voluptas culpa nulla
-                    dignissimos
-                    natus eligendi expedita recusandae.
-                </article>
-            </li>
-        </ul>
-    </aside>
+    <%- include("aside") %>
 
-    <footer title="legal">
-        <h3>Legal stuff</h3>
-        <p>&copy; Mr. Organitron 7000</p>
-    </footer>
+    <%- include("footer") %>
 </body>
 
 </html>

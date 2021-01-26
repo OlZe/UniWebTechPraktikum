@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+
+<body>
+
+    <%- include("header") %>
+
+    <main>
+        <nav>
+            <div><a href="/raumliste">Raumliste</a></div>
+            <div><a href="/raumdetail">Raumdetails</a></div>
+            <div><a href="/buchungsdetail">Buchungsdetails</a></div>
+            <div><a href="/neuebuchung">Buchung anlegen</a></div>
+        </nav>
+    </main>
+
+
+    <%- include("footer") %>
+
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>
